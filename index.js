@@ -1,14 +1,23 @@
 const inputBtn = document.getElementById("input-btn")
-let inputEl = document.getElementById("input-el")
-let myLead = ["www.awsomelead.com","www.lead2.com", "www.greatelead.com"]
-let ulEl = document.getElementById("ul-el")
+const inputEl = document.getElementById("input-el")
+const ulEl = document.getElementById("ul-el")
+let myLead = []
 
 inputBtn.addEventListener("click", function() {
     myLead.push(inputEl.value)
+    inputEl.value = ""
+    renderLeads()
 })
-
-let list = ""
-for (let i = 0; i < myLeads.length; i++) {
-    list += "<li>" + myLeads[i] + "</li>"
+function renderLeads(){
+    let list = ""
+    for (let i = 0; i < myLead.length; i++) {
+        list += `
+            <li>
+                <a target="_blank" href="${myLead[i]}">
+                    ${myLead[i]}
+                </a>
+            </li>
+        `
+    }
+    ulEl.innerHTML = list
 }
-ulEl.innerHTML = list
