@@ -9,16 +9,21 @@ input {
     padding: 10px;
     box-sizing: border-box;
     border:1px solid #5f9341;
-    min-width: 400px;
+    min-width: 300px;
+    max-width: 300px;
 }
 
 button {
     background-color: #5f9341;
-    border: none;
+    border: 1px solid #5f9341;
     color: white;
     margin-top: 2px;
     padding: 10px 20px;
     font-weight: bold;
+}
+#delete-btn{
+    background-color: white;
+    color: #5f9341;
 }
 
 ul {
